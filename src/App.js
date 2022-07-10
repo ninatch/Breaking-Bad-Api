@@ -6,20 +6,22 @@ import Search from './components/Search'
 const App = () => {
 
     const [data, setData] = useState([])
+    const [searchRes, setSearchRes] = useState('')
 
     useEffect(() => {
+        console.log({searchRes});
         async function fetchData() {
-            const response = await fetch('https://breakingbadapi.com/api/characters')
+            const response = await fetch(`https://breakingbadapi.com/api/characters?name=${searchRes}`)
             const data = await response.json()
             setData(data)
         }
         fetchData()
-    }, [])
+    }, [searchRes])
 
     return (
         <>
             <Header />
-            <Search />
+            <Search getCharName={(charName) => setSearchRes(charName)}/>
             <Characters data={data}/>
         </>
     )

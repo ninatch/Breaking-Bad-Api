@@ -1,7 +1,14 @@
 import React, { useState } from 'react'
 
-const Search = () => {
+const Search = ({ getCharName }) => {
     const [inputText, setInputText] = useState('')
+
+    console.log(inputText)
+
+    const onChange = (charName) => {
+        setInputText(charName)
+        getCharName(charName)
+    }
 
     return (
         <div className='search-bar'>
@@ -9,7 +16,7 @@ const Search = () => {
                 type='text'
                 placeholder='Find Character'
                 value={inputText}
-                onChange={(e) => setInputText(e.target.value)}
+                onChange={(e) => onChange(e.target.value)}
                 autoFocus
             />
         </div>
