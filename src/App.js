@@ -17,11 +17,11 @@ const App = () => {
     }, [])
 
     return (
-        <div>
+        <>
             <Header />
             <Search />
             <Characters data={data}/>
-        </div>
+        </>
     )
 }
 
