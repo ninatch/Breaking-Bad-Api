@@ -2,7 +2,7 @@ import React from 'react'
 
 const Characters = ({data}) => {
     return (
-        <div className='box'>
+        <>
             {data.map(char => (
                     <div className='card'>
                         <img src={char.img} style={{width:'200px'}}></img>
@@ -13,7 +13,7 @@ const Characters = ({data}) => {
                         <p>Birthday: {char.birthday}</p>
                     </div>
                 ))}
-        </div>
+        </>
     )
 }
 

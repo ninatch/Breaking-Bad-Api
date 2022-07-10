@@ -5,27 +5,22 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-areas: 
-        '. header .'
+        '. h .'
+        '. s .'
         'i i i';
 }
 
-.box {
-    border: 2px red solid;
+.bb-logo {
+    grid-area: h;
+    border: 2px green solid;
+}
+
+.search-bar {
+    grid-area: s;
 }
 
 .card {
     grid-area: i;
     width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border: 2px blue solid;
-    padding: 10px;
-    margin: auto
-}
-
-.bb-logo {
-    grid-area: header;
-    border: 2px red solid;
 }

@@ -4,7 +4,7 @@ const Search = () => {
     const [inputText, setInputText] = useState('')
 
     return (
-        <div>
+        <div className='search-bar'>
             <input 
                 type='text'
                 placeholder='Find Character'
