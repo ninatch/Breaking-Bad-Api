@@ -10,11 +10,11 @@ const Characters = ({data}) => {
                                 <img src={char.img} className='char-images'></img>
                             </div>
                             <div className='flip-card-back'>
-                                <p>Character: {char.name}</p>
-                                <p>Actor: {char.portrayed}</p>
-                                <p>Nickname: {char.nickname}</p>
-                                <p>Status: {char.status} </p>
-                                <p>Birthday: {char.birthday}</p>
+                                <p><strong>Character:</strong> {char.name}</p>
+                                <p><strong>Actor:</strong> {char.portrayed}</p>
+                                <p><strong>Nickname:</strong> {char.nickname}</p>
+                                <p><strong>Status:</strong> {char.status} </p>
+                                <p><strong>Birthday:</strong> {char.birthday}</p>
                             </div>
                         </div>
                     </div>
